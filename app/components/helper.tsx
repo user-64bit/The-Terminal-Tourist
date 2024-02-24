@@ -6,14 +6,14 @@ export type Post = {
 }
 
 export async function getPosts() {
-	const entries = await fs.readdir("./public/", { withFileTypes: true });
+	const entries = await fs.readdir("public/", { withFileTypes: true });
 
 	const dirs = entries
 		.filter((entry) => entry.isDirectory())
 		.map((entry) => entry.name);
 
 	const fileContents = await Promise.all(
-		dirs.map((dir) => fs.readFile("./public/" + dir + "/index.md", "utf8"))
+		dirs.map((dir) => fs.readFile("public/" + dir + "/index.md", "utf8"))
 	);
 
 	const posts: Array<Post> = dirs.map((slug, i) => {
