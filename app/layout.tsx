@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "./page";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "NotFalseCoder",
@@ -16,10 +13,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className="no-scrollbar">
+      <body className={"mx-auto max-w-5xl flex flex-col h-screen"}>
         <Navbar/>
-        {children}
+        <main className="border flex-grow">{children}</main>
       </body>
     </html>
   );
