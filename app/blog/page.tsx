@@ -6,7 +6,7 @@ export default async function Blog() {
     return (
         <>
             <div className='py-10 mb-auto'>
-                <div className='post flex justify-center'>
+                <div className='flex justify-center'>
                     <ul>
                         {posts.map(e =>
                             <li key={e.slug} className='text-sky-200'>

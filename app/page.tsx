@@ -10,7 +10,7 @@ export default async function Home() {
 
 	return (
 		<>
-			<div className="mx-auto max-w-5xl text-center">
+			<div className="mx-auto max-w-5xl text-center py-7">
 				<div className='overflow-y-scroll no-scrollbar'>
 					<div className='py-4'>
 						<h2 className='text-2xl py-2'>Hi I'm Arth Prajapati</h2>
@@ -21,15 +21,17 @@ export default async function Home() {
 							eligendi placeat natus voluptatem iste vel reprehenderit quia.</p>
 					</div>
 
-					<div className='py-4'>
-						{recentPosts.map((e) => (
-							<p key={e.slug} className='text-sky-200'>
-								<span className='me-2 text-slate-400'>{e.date}</span>
-								<Link href={"blog/" + e.slug}>{e.title}</Link>
-							</p>
-						))}
-					</div>
 				</div>
+			</div>
+			<div className='flex justify-center'>
+				<ul>
+					{recentPosts.map(e =>
+						<li key={e.slug} className='text-sky-200'>
+							<span className='mx-2 text-slate-400'>{e.date}</span>
+							<Link href={"blog/" + e.slug}>{e.title}</Link>
+						</li>
+					)}
+				</ul>
 			</div>
 		</>
 	)
