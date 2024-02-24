@@ -7,7 +7,7 @@ import overnight from "overnight/themes/Overnight-Slumber.json";
 import path from "path";
 
 export default async function Page({ params }: { params: { slug: string } }) {
-    const abs_path = path.resolve("public")
+    const abs_path = path.resolve("content")
     const filename = `${abs_path}/${params.slug}/index.md`;
     const file = await fs.readFile(filename, "utf-8")
     const { content, data } = matter(file);
