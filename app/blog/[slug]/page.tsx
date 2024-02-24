@@ -6,7 +6,7 @@ import rehypePrettyCode from "rehype-pretty-code";
 import overnight from "overnight/themes/Overnight-Slumber.json";
 
 export default async function Page({ params }: { params: { slug: string } }) {
-    const filename = `./public/${params.slug}/index.md`;
+    const filename = `public/${params.slug}/index.md`;
     const file = await fs.readFile(filename, "utf-8")
     const { content, data } = matter(file);
 
