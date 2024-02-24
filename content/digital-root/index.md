@@ -8,9 +8,9 @@ spoiler: "The limits of my language mean the limits of my world."
 
 So you might have seen digital root, some Example
 
-Examples: 123 =&gt; 1 + 2 + 3 =&gt; 6 455 =&gt; 4 + 5 + 5 =&gt; 14 =&gt; 1+4 = 5
 
-> To solve this type of problem in competitive coding we can attempt brute force too. but that will be slow. Then how will you solve this problem?
+> Examples: 123 =&gt; 1 + 2 + 3 =&gt; 6 455 =&gt; 4 + 5 + 5 =&gt; 14 =&gt; 1+4 = 5 <br/>
+To solve this type of problem in competitive coding we can attempt brute force too. but that will be slow. Then how will you solve this problem?
 
 Some points which we use in the digital root concept(properties),
 
