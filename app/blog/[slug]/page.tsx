@@ -4,9 +4,11 @@ import matter from "gray-matter";
 import "./markdown.css";
 import rehypePrettyCode from "rehype-pretty-code";
 import overnight from "overnight/themes/Overnight-Slumber.json";
+import path from "path";
 
 export default async function Page({ params }: { params: { slug: string } }) {
-    const filename = `public/${params.slug}/index.md`;
+    const abs_path = path.resolve("public")
+    const filename = `${abs_path}/${params.slug}/index.md`;
     const file = await fs.readFile(filename, "utf-8")
     const { content, data } = matter(file);
 
