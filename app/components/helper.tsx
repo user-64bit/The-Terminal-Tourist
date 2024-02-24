@@ -7,7 +7,7 @@ export type Post = {
 }
 
 export async function getPosts() {
-	const abs_path = path.resolve("public")
+	const abs_path = path.resolve("content")
 	const entries = await fs.readdir(abs_path, { withFileTypes: true });
 
 	const dirs = entries
