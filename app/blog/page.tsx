@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getPosts } from "../page"
+import { getPosts } from "@/components/helper";
 
 export default async function Blog() {
     const posts = await getPosts();
