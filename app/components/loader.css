@@ -1,0 +1,110 @@
+@keyframes wave {
+    0% {
+        opacity: 0;
+        transform: translateY(15px)
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-15px)
+    }
+}
+
+.main {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loader ul {
+    margin: 0 0 10px 0;
+    padding: 0;
+    list-style: none;
+    width: 60px;
+    text-align: center;
+    animation: wave 2.5s infinite linear;
+    animation-fill-mode: forwards;
+}
+
+.loader li {
+    display: inline-block;
+    background: white;
+    height: 30px;
+    width: 9px;
+    border-radius: 0 100%;
+    transform: rotate(12deg);
+}
+
+.cup {
+    background: white;
+    width: 60px;
+    height: 54px;
+    border-radius: 0 0 50% 50%;
+    position: relative;
+    border: 1px solid black;
+}
+
+.cup:before {
+    content: "";
+    position: absolute;
+    width: 66px;
+    height: 20px;
+    border-radius: 50%;
+    background: inherit;
+    border: 1px solid black;
+    left: -3px;
+    top: -10px;
+}
+
+.cup:after {
+    content: "";
+    position: absolute;
+    width: 56px;
+    height: 12px;
+    border-radius: 50%;
+    background: black;
+    border: 1px solid black;
+    left: 2px;
+    top: -6px;
+}
+
+.loader span {
+    background: white;
+    width: 13px;
+    height: 20px;
+    position: absolute;
+    right: -13px;
+    top: 10px;
+    border: 1px solid black;
+    border-radius: 0 50% 50% 0;
+}
+
+.loader span:before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    background: #212529;
+    width: 10px;
+    height: 12px;
+    border-radius: 0 50% 50% 0;
+}
+
+.loader span:after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: -50px;
+    background: white;
+    width: 40px;
+    border: 1px solid black;
+    height: 8px;
+    border-radius: 50%;
+}

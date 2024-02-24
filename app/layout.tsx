@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="no-scrollbar">
       <body className={"mx-auto max-w-5xl flex flex-col h-screen"}>
-        <Navbar/>
+        <Navbar />
         <main className="border flex-grow">{children}</main>
       </body>
     </html>
