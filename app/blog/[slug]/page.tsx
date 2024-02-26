@@ -16,7 +16,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
     return (
         <Suspense fallback={<Loader />}>
-            <article className="px-10">
+            <article className="ms-14 me-10">
                 <h1 className="text-center py-4 text-3xl underline text-red-500">{data.title}</h1>
                 <div className="">
                     <div className="markdown">
