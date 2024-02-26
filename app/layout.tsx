@@ -3,8 +3,8 @@ import "./globals.css";
 import Navbar from "./components/navbar";
 
 export const metadata: Metadata = {
-  title: "NotFalseCoder",
-  description: "Not False Coder",
+  title: "The Terminal Tourist",
+  description: "The Terminal Tourist",
 };
 
 export default function RootLayout({
