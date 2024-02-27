@@ -8,9 +8,13 @@ import path from "path";
 import Loader from "@/components/Loader";
 import { Suspense } from "react";
 
-export default async function Page({ params }: { params: { slug: string } }) {
+export default async function BlogPage({ params }: { params: { slug: string } }) {
+    if(params.slug==="favicon.ico"){
+        return;
+    }
     const abs_path = path.resolve("content")
     const filename = `${abs_path}/${params.slug}/index.md`;
+    
     const file = await fs.readFile(filename, "utf-8")
     const { content, data } = matter(file);
 

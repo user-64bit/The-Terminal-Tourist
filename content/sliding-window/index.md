@@ -1,7 +1,7 @@
 ---
 title: "Sliding Window"
 date: '2022-05-11'
-spoiler: "Sliding window technique is use for reducing some redundant calculation which slow down program"
+tooltip: "When you slide from the window, you'll hell so we carefull when looking out of window"
 ---
 ## Introduction
 
