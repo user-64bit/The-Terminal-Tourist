@@ -2,6 +2,7 @@
 title: "Digital Root"
 date: '2022-05-19'
 tooltip: "In this digital age let's learn digital root."
+auther: "Arth Prajapati"
 ---
 
 > What is a Digital root? if you have done little competitive programming or practice for Data Structure or anything else you have got a problem where you need to sum all digits of the number and do this process until the number becomes a single-digit number. so that is Digital Root, let's talk about it.

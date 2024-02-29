@@ -2,6 +2,7 @@
 title: "Sliding Window"
 date: '2022-05-11'
 tooltip: "When you slide from the window, you'll hell so we carefull when looking out of window"
+auther: "Arth Prajapati"
 ---
 ## Introduction
 

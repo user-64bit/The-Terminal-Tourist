@@ -3,7 +3,7 @@ import matter from "gray-matter";
 import path from "path";
 
 export type Post = {
-	slug: string; title?: string; date?: string; tooltip?: string;
+	slug: string; title?: string; date?: string; tooltip?: string; auther?: string
 }
 
 export async function getPosts() {
