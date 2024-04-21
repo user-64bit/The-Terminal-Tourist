@@ -23,7 +23,7 @@ export default async function BlogPage({ params }: { params: { slug: string } })
             <article className="ms-14 me-10">
                 <h1 className="pt-4 pb-2 text-3xl text-white font-bold">{data.title}</h1>
                 <p className="opacity-45">
-                    <span>{data.auther}/</span>
+                    <span>{data.author}/</span>
                     <span>{months[date.getMonth()] + " " + date.getDate() + "," + date.getFullYear()}</span>
                 </p>
                 <hr className="pb-10" />
