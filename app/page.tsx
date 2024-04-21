@@ -11,7 +11,7 @@ export default async function Home() {
                         {posts?.map(e =>
                             <li key={e.slug} className='text-sky-200' title={e?.tooltip}>
                                 <span className='mx-2 text-slate-400'>{e.date}</span>
-                                <Link href={e.slug}>{e.title}</Link>
+                                <span className="hover:underline"><Link href={e.slug}>{e.title}</Link></span>
                             </li>
                         )}
                     </ol>
