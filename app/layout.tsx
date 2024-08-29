@@ -14,7 +14,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="no-scrollbar"
-      suppressHydrationWarning
     >
       <body className={"mx-auto max-w-5xl flex flex-col h-screen"}>
         <Navbar />
