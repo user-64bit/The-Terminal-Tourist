@@ -7,28 +7,28 @@
   --padding-bottom: 1rem;
 }
 
-.markdown p {
-  @apply pb-4;
-}
-
 .markdown a {
   @apply border-b-[1px] border-[--link] text-[--link];
 }
 
+.markdown p {
+  @apply mb-2;
+}
 .markdown hr {
   @apply pt-8 opacity-60 dark:opacity-10;
 }
 
 .markdown h2 {
-  @apply mt-2 pb-8 text-3xl font-bold;
+  @apply mt-2 pb-2 text-3xl font-bold;
 }
 
 .markdown h3 {
-  @apply mt-2 pb-8 text-2xl font-bold;
+  @apply mt-2 pb-2 text-2xl font-bold;
 }
 
 .markdown h4 {
-  @apply mt-2 pb-8 text-xl font-bold;
+  @apply mt-2 pb-2 text-xl font-bold;
+  color: red;
 }
 
 .markdown :not(pre) > code {
@@ -55,9 +55,9 @@
 }
 
 .markdown blockquote {
-  @apply relative -left-2 -ml-4 mb-8 pl-4;
+  @apply relative left-4 -ml-4 mb-4 pl-4 mt-2;
   font-style: italic;
-  border-left: 3px solid hsla(0, 0%, 0%, 0.9);
+  border-left: 1px solid hsla(0, 0%, 0%, 0.1);
   border-left-color: inherit;
   opacity: 0.8;
 }
@@ -88,10 +88,14 @@
 }
 
 .markdown img {
-  @apply mb-8;
-  max-width: 100%;
+  margin: 0px auto;
+  margin-top: 5px;
 }
-
+.markdown em strong {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .markdown pre [data-highlighted-line] {
   margin-left: -16px;
   padding-left: 12px;
@@ -136,3 +140,10 @@
   background: #000;
   border-radius: 10px;
 }
+
+/* 
+h1 ---> big header (such as introduction) for section
+h2 ---> header
+h3 ---> tbd
+h4 ---> question and answer type of things
+*/
