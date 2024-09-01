@@ -13,7 +13,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="no-scrollbar">
+    <html lang="en" className="no-scrollbar"
+      suppressHydrationWarning
+    >
       <body className={"mx-auto max-w-5xl flex flex-col h-screen"}>
         <Navbar />
         <main className="border flex-grow">{children}</main>
