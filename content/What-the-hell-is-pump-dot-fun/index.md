@@ -14,7 +14,7 @@ Also You might want to grab a liter of coffee before we start because we're goin
 ![Chalo bhai Shuru karo](https://media1.tenor.com/m/wRgKMYTCNqYAAAAC/chalo-bhai-ab-mai-chalta-hu-meme-chalo-bhai-delho-ab-main-kya-karta-hoon.gif)
 
 So just click on <a href="https://pump.fun" target="_blank">pump.fun</a> and 🫨(many blinking animation on divs)
-![I'm 18+ so 😅](https://firebasestorage.googleapis.com/v0/b/ttt1-4e4d5.appspot.com/o/image.png?alt=media&token=d7d17cd7-1f81-45d4-b021-aa255528b3d4)
+![I'm 18+ so 😅](/assets/What-the-hell-is-pump-dot-fun/turn-off-animations.png)
 
 Now as you might have already lost half of your eye sight, you'll see some weird looking website.(website itself feel like meme 😉)
 
@@ -41,7 +41,7 @@ it is "little" lenghty process to create your coin and if it has some weird word
 
 jokes aside. pump.fun is zerodha/binance of *meme coins* and you can be creator of new **meme-coin** or you can trade existing coins with ease. 
 
-![Meme Coin](https://firebasestorage.googleapis.com/v0/b/ttt1-4e4d5.appspot.com/o/meme-coin-idea.png?alt=media&token=329dacb3-716e-4e0e-87f9-a9985a02795d)
+![Meme Coin](/assets/What-the-hell-is-pump-dot-fun/meme-coin-idea.png)
 
 So if you want to create your own crypto coin with your granny's name you can in literally less than 2 minutes(the same time you last during...)
 
@@ -87,12 +87,12 @@ Calm down Big boy.
 ### How to Launch token and make 💰
 
 If you just click on "How it works"(probably at top left corner) it will show you something like this,
-![How it works](https://firebasestorage.googleapis.com/v0/b/ttt1-4e4d5.appspot.com/o/how-it-works.png?alt=media&token=2904d3f0-3551-4f4e-af78-15f8e42e3e32)
+![How it works](/assets/What-the-hell-is-pump-dot-fun/how-it-works.png)
 
 now let's create our token. got to "Start a new coin" or click <a href="https://pump.fun/create" target="_blank">here</a> you lazy ass.\
 and connect your wallet if you haven't 🤷 (it'll be probably on top right corner)\
 and now fill the details of your token.
-![Create big things](https://firebasestorage.googleapis.com/v0/b/ttt1-4e4d5.appspot.com/o/create-coin-page.png?alt=media&token=f53b3e39-3f5d-4861-8643-adeb6868e7bb)  
+![Create big things](/assets/What-the-hell-is-pump-dot-fun/create-coin-page.png)  
 *As I'm unemployed and broke, I can't click on that 😔*
 You'll need to Pay a small fee of about **0.02 SOL** to deploy your token.\
 (*small fee for people with job* 🥲)
@@ -100,7 +100,7 @@ You'll need to Pay a small fee of about **0.02 SOL** to deploy your token.\
 Now sit tight because I'll throw a lot of jargons.
 
 After smashing the "Create coin" button you'll probably have this popup.
-![Create big things](https://firebasestorage.googleapis.com/v0/b/ttt1-4e4d5.appspot.com/o/you-buy-token-page.png?alt=media&token=2aa54b87-ca7b-4f44-861e-303a47b23dd9)  
+![Create big things](/assets/What-the-hell-is-pump-dot-fun/you-buy-token-page.png)
 ***Of course, you'll buy your own coin, right?***
 
 So you might have multiple questions like,
@@ -112,7 +112,7 @@ So you might have multiple questions like,
 => Tell me fast, I want to click on the "Create coin" button.🤧
 
 calm down. you're freaking me out with these questions.
-![Breathe in & Breathe out](https://firebasestorage.googleapis.com/v0/b/ttt1-4e4d5.appspot.com/o/iski-vehen-ka-masala-dosa.jpg?alt=media&token=5fbe8a64-ee5a-4a98-96e7-a0727271434f)  
+![Breathe in & Breathe out](/assets/What-the-hell-is-pump-dot-fun/iski-vehen-ka-masala-dosa.jpg)
 ***Breathe in & Breathe out***
 
 Let me answer your questions one by one:

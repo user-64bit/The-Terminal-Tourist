@@ -1,4 +1,4 @@
-import { promises as fs } from "fs";
+import fs from "fs/promises";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import matter from "gray-matter";
 import "./markdown.css";
@@ -14,7 +14,8 @@ const formatDate = (dateString: string) => {
 };
 
 export default async function BlogPage({ params }: { params: { slug: string } }) {
-  if (params.slug === "favicon.ico") {
+  const useless = params.slug?.split(".")[1]
+  if ([".ico", ".png", ".jpg", "gif"].includes(useless)) {
     return null;
   }
 
@@ -54,4 +55,13 @@ export default async function BlogPage({ params }: { params: { slug: string } })
       </div>
     </Suspense>
   );
+}
+
+export async function generateStaticParams() {
+  const abs_path = path.resolve("content")
+  const entries = await fs.readdir(abs_path, { withFileTypes: true });
+  const dirs = entries
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => entry.name);
+  return dirs.map((dir) => ({ slug: dir }));
 }

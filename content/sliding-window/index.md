@@ -38,7 +38,7 @@ int main(){
 But time complexity of above program is O(nk)
 
 **Brute Force Approach**
-![enter image description here](https://i.stack.imgur.com/2Dneo.png)
+![Brute Force Approach](/assets/sliding-window/brute-force-image.png)
 
 As per we can see in above image brute approach checks every patter of k length(here k=5). if you compare above code with this image you will understand it.here k=5 so it won't make too much different in O(n) and O(nk) but what if k is too big. then it will impact running time of program, so what to do now? can we implement this above code to O(n)?
 
@@ -72,7 +72,7 @@ let's understand with second example,
     and so on.
 ```
 
-![enter image description here](https://i.stack.imgur.com/F6087.png)
+![Sliding window image](/assets/sliding-window/sliding-window-image-1.png)
 As we can see in above image it move one step at one time. so this is how actually it works.
 
 ## Let's Code
