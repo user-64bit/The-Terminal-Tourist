@@ -253,7 +253,7 @@ Everything has there Pros and Cons and so do pump.fun too.
 
 ### References:
 
-=> https://yos.io/2018/11/10/bonding-curves/\
-=> https://github.com/BenSchZA/awesome-bonding\
+=> [Best Bonding Curves Blog](https://yos.io/2018/11/10/bonding-curves/)\
+=> [awesome-bonding github-repo](https://github.com/BenSchZA/awesome-bonding)\
 => lots of medium posts\
-=> perplexity\
+=> perplexity
