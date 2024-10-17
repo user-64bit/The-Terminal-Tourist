@@ -1,5 +1,5 @@
 .markdown {
-  line-height: 26px;
+  line-height: 24px;
   --path: none;
   --radius-top: 12px;
   --radius-bottom: 12px;
@@ -40,7 +40,7 @@
 }
 
 .markdown pre {
-  @apply -mx-4 mb-8 overflow-y-auto p-4 text-sm;
+  @apply -mx-0 mb-8 overflow-y-auto p-4 text-sm;
   clip-path: var(--path);
   border-top-right-radius: var(--radius-top);
   border-top-left-radius: var(--radius-top);

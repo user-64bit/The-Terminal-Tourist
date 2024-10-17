@@ -17,7 +17,7 @@ export default function RootLayout({
     >
       <body className={"mx-auto max-w-5xl flex flex-col h-screen"}>
         <Navbar />
-        <main className="border flex-grow">{children}</main>
+        <main className="border border-[#212529] flex-grow">{children}</main>
       </body>
     </html>
   );
