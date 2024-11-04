@@ -1,149 +1,135 @@
 .markdown {
-  line-height: 24px;
-  --path: none;
-  --radius-top: 12px;
-  --radius-bottom: 12px;
-  --padding-top: 1rem;
-  --padding-bottom: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  font-size: 1.1rem;
 }
 
 .markdown a {
-  @apply border-b-[1px] border-[--link] text-[--link];
+  @apply border-b-[1px] border-[--link] text-[--link] transition-all duration-200;
+}
+
+.markdown a:hover {
+  @apply border-b-2;
 }
 
 .markdown p {
-  @apply mb-2;
+  @apply mb-4;
 }
+
 .markdown hr {
-  @apply pt-8 opacity-60 dark:opacity-10;
+  @apply my-8 border-t border-gray-700 opacity-60 dark:opacity-30;
 }
 
 .markdown h2 {
-  @apply mt-2 pb-2 text-3xl font-bold;
+  @apply mt-8 mb-4 text-3xl font-bold text-white;
 }
 
 .markdown h3 {
-  @apply mt-2 pb-2 text-2xl font-bold;
+  @apply mt-6 mb-3 text-2xl font-bold text-white;
 }
 
 .markdown h4 {
-  @apply mt-2 pb-2 text-xl font-bold;
-  color: red;
+  @apply mt-4 mb-2 text-xl font-bold text-red-500;
 }
 
 .markdown :not(pre) > code {
-  border-radius: 10px;
-  background: var(--inlineCode-bg);
-  color: var(--inlineCode-text);
-  padding: 0.15em 0.2em 0.05em;
-  white-space: normal;
+  border-radius: 4px;
+  background: var(--inline-code-bg);
+  color: var(--inline-code-text);
+  padding: 0.2em 0.4em;
+  font-size: 0.9em;
+  font-family: 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
 .markdown pre {
-  @apply -mx-0 mb-8 overflow-y-auto p-4 text-sm;
-  clip-path: var(--path);
-  border-top-right-radius: var(--radius-top);
-  border-top-left-radius: var(--radius-top);
-  border-bottom-right-radius: var(--radius-bottom);
-  border-bottom-left-radius: var(--radius-bottom);
-  padding-top: var(--padding-top);
-  padding-bottom: var(--padding-bottom);
+  @apply my-6 overflow-x-auto rounded-lg bg-[--code-bg] p-4 text-sm leading-relaxed;
+  box-shadow: 3px 3px 0px var(--shadow);
 }
 
 .markdown pre code {
-  width: auto;
+  @apply block w-full;
 }
 
 .markdown blockquote {
-  @apply relative left-4 -ml-4 mb-4 pl-4 mt-2;
-  font-style: italic;
-  border-left: 1px solid hsla(0, 0%, 0%, 0.1);
-  border-left-color: inherit;
-  opacity: 0.8;
+  @apply relative my-6 rounded-lg bg-[--blockquote-bg] p-4 italic;
+  box-shadow: 3px 3px 0px var(--shadow);
+}
+
+.markdown blockquote::before {
+  content: '"';
+  @apply absolute -top-4 left-2 text-4xl text-[--link] opacity-50;
 }
 
 .markdown blockquote p {
-  margin: 0;
-  padding: 0;
+  @apply m-0;
 }
 
-.markdown p img {
-  margin-bottom: 0;
+.markdown ul, .markdown ol {
+  @apply my-4 ml-6;
 }
 
 .markdown ul {
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.75rem;
-  list-style-position: outside;
-  list-style-image: none;
-  list-style: disc;
+  @apply list-disc;
+}
+
+.markdown ol {
+  @apply list-decimal;
 }
 
 .markdown li {
-  margin-bottom: calc(1.75rem / 4);
+  @apply mb-2;
 }
 
 .markdown img {
-  margin: 0px auto;
-  margin-top: 5px;
-}
-.markdown em strong {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.markdown pre [data-highlighted-line] {
-  margin-left: -16px;
-  padding-left: 12px;
-  border-left: 4px solid #ffa7c4;
-  background-color: #022a4b;
-  display: block;
-  padding-right: 1em;
-}
-.markdown pre {
-  box-shadow: 3px 3px 0px #2e3440b4;
+  @apply my-6 mx-auto rounded-lg;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-.markdown blockquote {
-  background-color: #282c34;
-  border-radius: 10px;
-  padding: 5px 10px;
-  box-shadow: 3px 3px 0px #2e3440b4;
+.markdown em strong {
+  @apply flex items-center justify-center font-bold italic text-[--highlight];
+}
+
+.markdown pre [data-highlighted-line] {
+  @apply -ml-4 block border-l-4 border-[--highlight] bg-[#022a4b] pl-3 pr-4;
+}
+
+.markdown table {
+  @apply w-full my-6 border-collapse;
+}
+
+.markdown th,
+.markdown td {
+  @apply border border-gray-700 px-4 py-2;
+}
+
+.markdown th {
+  @apply bg-gray-800 font-bold text-white;
+}
+
+.markdown tr:nth-child(even) {
+  @apply bg-gray-900;
+}
+
+.markdown tr:hover {
+  @apply bg-gray-800;
 }
 
 ::-webkit-scrollbar {
-  height: 4px;
-  width: 4px;
-  background: #2e3440b4;
+  @apply h-2 w-2 bg-[--shadow];
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  @apply bg-gray-800;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  @apply rounded-full bg-gray-600;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  @apply bg-gray-500;
 }
 
 ::-webkit-scrollbar-thumb:horizontal {
-  background: #000;
-  border-radius: 10px;
+  @apply rounded-full bg-gray-700;
 }
-
-/* 
-h1 ---> big header (such as introduction) for section
-h2 ---> header
-h3 ---> tbd
-h4 ---> question and answer type of things
-*/
