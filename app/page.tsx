@@ -1,23 +1,37 @@
 import Link from "next/link";
 import { getPosts } from "@/components/helper";
+import PageTransition from "@/components/PageTransition";
+import AnimatedBlogCard from "@/components/AnimatedBlogCard";
+
 export default async function Home() {
     const posts = await getPosts();
+    
     return (
-        <>
-            <div className='pt-20 mb-auto'>
-                <h1 className="text-center text-2xl pb-5 underline">Blogs</h1>
-                <div className='flex justify-center'>
-                    <ol className="">
-                        {posts?.map(post =>
-                            <li key={post.slug} className='text-sky-200 flex' title={post?.tooltip}>
-                                <p className='mx-2 text-slate-400 text-nowrap'>{post.date}</p>
-                                <p className="hover:underline"><Link href={"/" + post.slug + "/"}
-                                >{post.title}</Link></p>
-                            </li>
+        <PageTransition>
+            <div className="flex flex-col items-center mb-10">
+                <div className="w-full max-w-3xl">
+                    <h1 className="text-3xl mb-8 text-center text-glow terminal-text border-b-2 border-[var(--highlight)] pb-2 inline-block">
+                        Latest Posts
+                    </h1>
+                    
+                    <div className="mt-6 grid gap-6 w-full">
+                        {posts?.length ? (
+                            posts.map((post, index) => (
+                                <AnimatedBlogCard 
+                                    key={post.slug}
+                                    post={post}
+                                    index={index}
+                                />
+                            ))
+                        ) : (
+                            <div className="text-center py-10 text-gray-400">
+                                <p className="mb-2">No posts found</p>
+                                <p className="text-sm">Check back soon for new content!</p>
+                            </div>
                         )}
-                    </ol>
+                    </div>
                 </div>
             </div>
-        </>
-    )
+        </PageTransition>
+    );
 }

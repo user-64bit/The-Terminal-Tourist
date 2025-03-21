@@ -1,35 +1,68 @@
 .markdown {
-  line-height: 1.6;
+  line-height: 1.8;
   color: var(--text);
   font-size: 1.1rem;
 }
 
 .markdown a {
-  @apply border-b-[1px] border-[--link] text-[--link] transition-all duration-200;
+  color: var(--link);
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid var(--link);
 }
 
 .markdown a:hover {
-  @apply border-b-2;
+  color: var(--highlight);
+  border-color: var(--highlight);
 }
 
 .markdown p {
-  @apply mb-4;
+  margin-bottom: 1.5rem;
 }
 
 .markdown hr {
-  @apply my-8 border-t border-gray-700 opacity-60 dark:opacity-30;
+  margin: 2rem 0;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(80, 80, 80, 0), rgba(80, 80, 80, 0.75), rgba(80, 80, 80, 0));
 }
 
 .markdown h2 {
-  @apply mt-8 mb-4 text-3xl font-bold text-white;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.markdown h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background: var(--highlight);
+  border-radius: 3px;
 }
 
 .markdown h3 {
-  @apply mt-6 mb-3 text-2xl font-bold text-white;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
 }
 
 .markdown h4 {
-  @apply mt-4 mb-2 text-xl font-bold text-red-500;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--secondary-highlight);
 }
 
 .markdown :not(pre) > code {
@@ -38,80 +71,167 @@
   color: var(--inline-code-text);
   padding: 0.2em 0.4em;
   font-size: 0.9em;
-  font-family: 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family: 'JetBrains Mono', 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.2s ease;
+}
+
+.markdown :not(pre) > code:hover {
+  background: rgba(100, 181, 246, 0.1);
+  border-color: rgba(100, 181, 246, 0.3);
 }
 
 .markdown pre {
-  @apply my-6 overflow-x-auto rounded-lg bg-[--code-bg] p-4 text-sm leading-relaxed;
-  box-shadow: 3px 3px 0px var(--shadow);
+  margin: 1.5rem 0;
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 8px;
+  background: var(--code-bg);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-color);
+  position: relative;
 }
 
 .markdown pre code {
-  @apply block w-full;
+  display: block;
+  width: 100%;
+  line-height: 1.6;
+  font-size: 0.9rem;
 }
 
 .markdown blockquote {
-  @apply relative my-6 rounded-lg bg-[--blockquote-bg] p-4 italic;
-  box-shadow: 3px 3px 0px var(--shadow);
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  background: var(--blockquote-bg);
+  border-left: 4px solid var(--link);
+  border-radius: 4px;
+  font-style: italic;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .markdown blockquote::before {
   content: '"';
-  @apply absolute -top-4 left-2 text-4xl text-[--link] opacity-50;
+  position: absolute;
+  top: -0.5rem;
+  left: 0.5rem;
+  font-size: 3rem;
+  color: var(--link);
+  opacity: 0.3;
+  font-family: Georgia, serif;
 }
 
 .markdown blockquote p {
-  @apply m-0;
+  margin-bottom: 0.5rem;
+}
+
+.markdown blockquote p:last-child {
+  margin-bottom: 0;
 }
 
 .markdown ul, .markdown ol {
-  @apply my-4 ml-6;
+  margin: 1.5rem 0;
+  padding-left: 2rem;
 }
 
 .markdown ul {
-  @apply list-disc;
+  list-style-type: none;
+}
+
+.markdown ul li {
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.markdown ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--highlight);
+  font-weight: bold;
 }
 
 .markdown ol {
-  @apply list-decimal;
+  list-style-type: decimal;
+  counter-reset: list-counter;
+}
+
+.markdown ol li {
+  counter-increment: list-counter;
+  position: relative;
+  padding-left: 0.5rem;
 }
 
 .markdown li {
-  @apply mb-2;
+  margin-bottom: 0.75rem;
 }
 
 .markdown img {
-  @apply my-6 mx-auto rounded-lg;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  max-width: 100%;
+  height: auto;
+  margin: 2rem auto;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.markdown em strong {
-  @apply flex items-center justify-center font-bold italic text-[--highlight];
+.markdown img:hover {
+  transform: scale(1.02);
+}
+
+.markdown em {
+  color: #ffd700;
+}
+
+.markdown strong {
+  color: white;
+  font-weight: 700;
+}
+
+.markdown em strong, .markdown strong em {
+  color: var(--highlight);
+  font-style: italic;
+  font-weight: 700;
 }
 
 .markdown pre [data-highlighted-line] {
-  @apply -ml-4 block border-l-4 border-[--highlight] bg-[#022a4b] pl-3 pr-4;
+  display: block;
+  margin-left: -1rem;
+  padding-left: 0.75rem;
+  border-left: 4px solid var(--highlight);
+  background: rgba(255, 59, 59, 0.1);
 }
 
 .markdown table {
-  @apply w-full my-6 border-collapse;
+  width: 100%;
+  margin: 2rem 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .markdown th,
 .markdown td {
-  @apply border border-gray-700 px-4 py-2;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  text-align: left;
 }
 
 .markdown th {
-  @apply bg-gray-800 font-bold text-white;
+  background: var(--code-bg);
+  font-weight: 600;
+  color: white;
 }
 
 .markdown tr:nth-child(even) {
-  @apply bg-gray-900;
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .markdown tr:hover {
-  @apply bg-gray-800;
+  background: rgba(100, 181, 246, 0.05);
 }
 
 ::-webkit-scrollbar {

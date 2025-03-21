@@ -2,21 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&display=swap');
+@import './animations.css';
 
 *{
-  font-family: "Noto Sans Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: "JetBrains Mono", "Noto Sans Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 :root {
   color: white;
-  background-color: black;
-  --background: #1a1a1a;
+  background-color: #0a0a0a;
+  --background: #0a0a0a;
   --text: #e0e0e0;
   --link: #64b5f6;
-  --code-bg: #2a2a2a;
-  --inline-code-bg: #3a3a3a;
+  --highlight: #ff3b3b;
+  --secondary-highlight: #00b3ff;
+  --code-bg: #1a1a1a;
+  --inline-code-bg: #2a2a2a;
   --inline-code-text: #f1f1f1;
-  --blockquote-bg: #282c34;
-  --highlight: #ffa7c4;
-  --shadow: #2e3440b4;
+  --blockquote-bg: #1a1a1a;
+  --shadow: rgba(0, 0, 0, 0.3);
+  --card-bg: #121212;
+  --navbar-bg: #0a0a0a;
+  --border-color: #363636;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--highlight);
+}
+
+/* Hide scrollbar but allow scrolling */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom utility classes */
+.terminal-text {
+  font-family: "JetBrains Mono", monospace;
+  letter-spacing: -0.025em;
+}
+
+.text-glow {
+  animation: textGlow 3s infinite;
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+.blog-card {
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px var(--shadow);
 }
